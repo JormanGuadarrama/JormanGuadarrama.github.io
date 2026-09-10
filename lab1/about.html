@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About | Team OneOne</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>About Us</h1>
-    <p>Welcome to our team's page! We are a group of passionate software engineers dedicated to creating innovative solutions.</p>
+    <div id="header">
+        <div id="header-text" style="display: flex; justify-content: center;">
+            <h1 id="title">Team OneOne</h1>
+        </div>
+        <div id="nav" style="display: flex; justify-content: center;">
+            <p class="nav-link"><a href="index.html">Home</a></p>
+            <p class="nav-link"><a class="active" aria-current="page" href="about.html">About</a></p>
+            <p class="nav-link"><a href="contact.html">Contact</a></p>
+        </div>
+    </div>
+    <main>
+        <h2 class="page-heading">About Our Team</h2>
+        <p>We are a group of passionate software engineers dedicated to creating innovative solutions for the Acme Corporation.</p>
+        <div class="about-grid">
+            <section>
+                <table>
+                    <caption>Team members</caption>
+                    <thead><tr><th>Name</th><th>Role</th></tr></thead>
+                    <tbody>
+                        <tr><td>Joel</td><td>Software Engineer</td></tr>
+                        <tr><td>Isabelle</td><td>Software Engineer</td></tr>
+                        <tr><td>Leslie</td><td>Software Engineer</td></tr>
+                        <tr><td>Jorman</td><td>Software Engineer</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>What we value</h3>
+                <ul>
+                    <li>Creative and practical problem solving</li>
+                    <li>Clear, respectful collaboration</li>
+                    <li>Reliable and accessible software</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <div id="logo-image" style="display: flex; justify-content: center;">
+                <img src="images/csumb-logo.jpg" alt="CSUMB logo" width="300" height="100">
+            </div>
+            <div id="footer-text" style="display: flex; justify-content: center;">
+                <p>CST336 Internet Programming. 2026&copy; Guadarrama, Jimenez, Johnson, Lozano<br>
+                    <b>Disclaimer:</b> The information in this webpage is fictitious.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

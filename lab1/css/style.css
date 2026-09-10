@@ -2,7 +2,7 @@
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 42px;
-    margin-bottom: 0 auto
+    margin-bottom: 0 auto;
 }
 
 .nav-link {
@@ -11,4 +11,69 @@
     font-size: 38px;
     margin: 0 20px;
     padding: 50px;
+}
+
+.nav-link a:hover,
+.nav-link a:focus {
+    background-color: #eeeeee;
+}
+
+.nav-link a.active {
+    font-weight: bold;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.page-heading {
+    text-align: center;
+}
+
+#team-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#team-images img {
+    object-fit: cover;
+}
+
+.about-grid {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.contact-card {
+    padding: 10px;
+}
+
+.form-frame {
+    min-height: 650px;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    #nav {
+        flex-wrap: wrap;
+    }
 }
