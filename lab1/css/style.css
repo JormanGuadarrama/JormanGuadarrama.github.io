@@ -1,0 +1,14 @@
+#title {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 42px;
+    margin-bottom: 0 auto
+}
+
+.nav-link {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    margin: 0 20px;
+    padding: 50px;
+}
