@@ -1,0 +1,62 @@
+/* Visual styling for the guessing game */
+body {
+    margin: 0;
+    padding: 40px 20px;
+    color: hsl(0, 0%, 2%);
+    background: white;
+    font-family: "Segoe UI", Arial, sans-serif;
+    text-align: center;
+}
+
+#gameContainer {
+    width: 480px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid hsl(0, 2%, 10%);
+}
+
+#header {
+    margin-bottom: 28px;
+    background-color: hsl(0, 0%, 76%);
+}
+
+#header h1 {
+    margin: 0 0 5px;
+    color: hwb(0 0% 100%);
+    font-size: 2.5rem;
+}
+
+#header h2 {
+    margin: 0;
+    color: hsl(310, 48%, 73%);
+    font-weight: 500;
+}
+
+.guessControls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+#guessInput,
+#guessButton {
+    padding: 13px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#guessInput {
+    width: 150px;
+}
+
+#guessButton {
+    color: white;
+    background-color: hsl(310, 48%, 73%);
+    cursor: pointer;
+}
+
+#footer {
+    margin-top: 40px;
+    color: #475569;
+}
