@@ -10,6 +10,7 @@ let winMessage = "Congratulations! You guessed the number!";
 
 const guessInput = document.querySelector("#guessInput");
 const guessButton = document.querySelector("#guessButton");
+const retryButton = document.querySelector("#retryButton");
 const attemptsDisplay = document.querySelector("#attemptsLeft");
 const hintText = document.querySelector("#hintText");
 
@@ -73,6 +74,8 @@ guessButton.addEventListener("click", function () {
         console.log("You are out of attempts!");
         hintText.textContent = "You are out of attempts! The number was " + answer + ".";
         guessButton.disabled = true;
+        guessInput.disabled = true;
+        retryButton.hidden = false;
         guessMessage.classList.add("gameOver");
     } else if (guessInput.value < 1 || guessInput.value > 100) {
         console.log("Your guess is out of range!");
@@ -85,6 +88,20 @@ guessButton.addEventListener("click", function () {
         hintText.textContent = "Your guess is too high! Try a lower number.";
     }
 })
+
+retryButton.addEventListener("click", function () {
+    answer = Math.floor(Math.random() * 100) + 1;
+    attemptsLeft = 7;
+    attemptsDisplay.textContent = attemptsLeft;
+    guessInput.value = "";
+    guessInput.disabled = false;
+    guessInput.classList.remove("correct");
+    guessButton.disabled = false;
+    retryButton.hidden = true;
+    hintText.textContent = "The number is between 1 and 100.";
+    guessMessage.classList.remove("gameOver", "success");
+    guessMessage.firstChild.textContent = "Hint: ";
+});
 
 
 
