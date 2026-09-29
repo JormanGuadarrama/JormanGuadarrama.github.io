@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Quiz</title>
+    <script src="js/script.js" defer></script>
+
+    <style>
+        /* Small, neutral quiz objects; the browser's default appearance remains visible. */
+        .quiz {
+            display: block;
+            position: static;
+            width: auto;
+            max-width: none;
+            min-height: 0;
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            background: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: normal;
+            line-height: normal;
+            text-align: left;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            opacity: 1;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML and CSS Quiz</h1>
+
+    <main id="quiz" class="quiz">
+    <div class="question" id="question1">
+        <p>1. What HTML element creates a dropdown menu?</p>
+
+        <div id="q1Choices"></div>
+
+        <p id="feedback1"></p>
+    </div>
+
+    <div class="question">
+        <p>2. What language is used to style HTML pages?</p>
+
+        <input type="text" id="q2">
+
+        <p id="feedback2"></p>
+    </div>
+
+    <div class="question">
+        <p>3. Choose the correct HTML heading tag:</p>
+
+        <select id="q3">
+            <option value="">Choose one</option>
+            <option value="p">&lt;p&gt;</option>
+            <option value="h1">&lt;h1&gt;</option>
+            <option value="div">&lt;div&gt;</option>
+        </select>
+
+        <p id="feedback3"></p>
+    </div>
+
+    <div class="question">
+        <p>4. How many main parts are in a basic HTML document?</p>
+
+        <input type="number" id="q4">
+
+        <p id="feedback4"></p>
+    </div>
+
+    <div class="question">
+        <p>5. Which of these are HTML elements? Select all that apply.</p>
+
+        <label>
+            <input type="checkbox" name="q5" value="p">
+            p
+        </label>
+
+        <label>
+            <input type="checkbox" name="q5" value="h1">
+            h1
+        </label>
+
+        <label>
+            <input type="checkbox" name="q5" value="css">
+            CSS
+        </label>
+
+        <p id="feedback5"></p>
+    </div>
+
+    <button id="submitQuiz" type="button">Submit Quiz</button>
+
+    <h2 id="score"></h2>
+    <p id="attempts"></p>
+    <p id="congratulations"></p>
+    </main>
+
+</body>
+</html>

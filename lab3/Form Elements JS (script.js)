@@ -1,0 +1,34 @@
+console.log("it's tuesday");
+
+///BASIC INPUT
+//making a variable for the input
+let basicInput = document.querySelector("#basic-input");
+//access its value property to look up what the user typed in
+console.log(basicInput.value);
+
+///NUMERIC INPUT
+let numericInput = document.querySelector("#age-input");
+//still use value to look up what the user typed
+//adding plus (+) converts the input from a string to a number
+console.log(+numericInput.value);
+
+
+//DROP DOWN INPUT
+let dropDownInput = document.querySelector("#car-model-input");
+//looking the selected value is the same as for other inputs
+console.log(dropDownInput.value);
+
+
+///CHECK BOX LIST INPUT
+//Each check box option gets evaluated separately
+let lettuceOption = document.querySelector("#lettuce");
+let tomatoOption = document.querySelector("#tomato");
+
+//checking if the user selected both lettuce and tomato
+if (lettuceOption.checked && tomatoOption.checked) {
+
+}
+
+//RADIO BUTTON LIST
+let selectedOption = document.querySelector("input[name=truth]:checked").value;
+console.log(selectedOption);
