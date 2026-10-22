@@ -1,0 +1,84 @@
+:root {
+    --nav-background: #f2f2f2;
+    --page-spacing: 1rem;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    padding: var(--page-spacing);
+    background-color: var(--nav-background);
+}
+
+.navbar .nav-link.active {
+    text-decoration: underline;
+}
+
+.intro {
+    margin-bottom: var(--page-spacing);
+}
+
+.space-image {
+    width: 100%;
+    max-width: 360px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.planet-image {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+}
+
+figcaption span {
+    display: block;
+}
+
+.planet-facts dd {
+    margin-bottom: 0.75rem;
+}
+
+.source-note,
+.site-footer {
+    color: #555;
+    font-size: 0.875rem;
+}
+
+.source-note {
+    margin-top: var(--page-spacing);
+}
+
+.site-footer {
+    padding-top: var(--page-spacing);
+    padding-bottom: var(--page-spacing);
+    border-top: 1px solid #ddd;
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+
+.error {
+    color: #a00;
+}
+
+.csumb-logo {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.75rem;
+}
+
+.pod-image {
+    width: 100%;
+    height: auto;
+}

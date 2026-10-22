@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %></head>
+<body>
+    <%- include('partials/navbar') %>
+    <main class="container py-3">
+        <h1><%= name %></h1>
+        <div class="row g-3">
+            <div class="col-lg-6">
+                <figure>
+                    <img class="planet-image" src="<%= imageUrl %>" alt="<%= name %>">
+                    <figcaption>
+                        <a href="<%= imageSource %>" target="_blank" rel="noopener noreferrer">View image source</a>
+                        <% if (imageUrl !== planet.image) { %>
+                            <br><a href="<%= planet.image %>" target="_blank" rel="noopener noreferrer">Original image URL (no longer available)</a>
+                        <% } %>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6">
+                <h2>About <%= name %></h2>
+                <p><%= planet.description %></p>
+                <dl class="planet-facts">
+                    <% for (const [key, value] of Object.entries(planet)) { %>
+                        <% if (!['image', 'description', 'websiteLink'].includes(key)) { %>
+                            <div>
+                                <dt><%= ({ distanceFromSun: 'Distance from the Sun', yearLength: 'Year length', radius: 'Radius (miles)', oneEarthDay: 'Day length', moons: 'Moons' })[key] || key %></dt>
+                                <dd><%= value %></dd>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </dl>
+                <a href="<%= planet.websiteLink %>" target="_blank" rel="noopener noreferrer">Learn more at NASA</a>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

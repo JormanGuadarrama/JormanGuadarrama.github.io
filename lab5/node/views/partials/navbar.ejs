@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-xxl navbar-light" aria-label="Main navigation">
+    <div class="container">
+        <a class="navbar-brand" href="/">Solar System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#planetNavigation" aria-controls="planetNavigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="planetNavigation">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link <%= activePath === '/' ? 'active' : '' %>" href="/" <% if (activePath === '/') { %>aria-current="page"<% } %>>Home</a></li>
+                <% for (const planetName of planets) { %>
+                    <li class="nav-item">
+                        <a class="nav-link <%= activePlanet === planetName ? 'active' : '' %>" href="/planet/<%= planetName.toLowerCase() %>" <% if (activePlanet === planetName) { %>aria-current="page"<% } %>><%= planetName %></a>
+                    </li>
+                <% } %>
+                <% for (const [path, label] of [['/asteroids', 'Asteroids'], ['/comets', 'Comets'], ['/nasa-pod', 'NASA POD']]) { %>
+                    <li class="nav-item"><a class="nav-link <%= activePath === path ? 'active' : '' %>" href="<%= path %>" <% if (activePath === path) { %>aria-current="page"<% } %>><%= label %></a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %></head>
+<body>
+    <%- include('partials/navbar') %>
+    <main class="container py-3">
+        <h1>NASA Picture of the Day</h1>
+        <% if (error) { %>
+            <div class="error" role="alert">
+                <p><%= error %></p>
+                <a href="/nasa-pod">Try again</a>
+            </div>
+        <% } else { %>
+            <div class="row g-3">
+                <div class="col-lg-6">
+                    <% if (picture.media_type === 'image') { %>
+                        <a href="<%= picture.hdurl || picture.url %>" target="_blank" rel="noopener noreferrer">
+                            <img class="pod-image" src="<%= picture.url %>" alt="<%= picture.title %>">
+                        </a>
+                    <% } else { %>
+                        <p>Today's NASA selection is a video.</p>
+                        <a href="<%= picture.url %>" target="_blank" rel="noopener noreferrer">Watch today's NASA video</a>
+                    <% } %>
+                </div>
+                <div class="col-lg-6">
+                    <h2><%= picture.title %></h2>
+                    <p><time datetime="<%= picture.date %>"><%= picture.date %></time></p>
+                    <p><%= picture.explanation %></p>
+                    <% if (picture.copyright) { %><p>Image credit: <%= picture.copyright %></p><% } %>
+                    <a href="https://science.nasa.gov/apod/" target="_blank" rel="noopener noreferrer">NASA Astronomy Picture of the Day</a>
+                </div>
+            </div>
+        <% } %>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

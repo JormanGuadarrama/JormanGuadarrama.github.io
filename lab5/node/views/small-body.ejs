@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %></head>
+<body>
+    <%- include('partials/navbar') %>
+    <main class="container py-3">
+        <h1><%= name %></h1>
+        <div class="row g-3">
+            <div class="col-lg-6">
+                <figure>
+                    <img class="planet-image" src="<%= body.image %>" alt="<%= name %>">
+                    <figcaption><a href="<%= body.image %>" target="_blank" rel="noopener noreferrer">View image source</a></figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6">
+                <h2>About <%= name %></h2>
+                <p><%= body.def %></p>
+                <a href="<%= body.link %>" target="_blank" rel="noopener noreferrer">Learn more at NASA</a>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>
